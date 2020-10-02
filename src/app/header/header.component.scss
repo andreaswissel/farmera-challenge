@@ -1,0 +1,62 @@
+:host {
+  background-image: linear-gradient(232deg, #4b626e, #263238);
+
+  display: flex;
+  flex-direction: column;
+
+  color: #fff;
+
+  padding: 28px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 3rem;
+  grid-row-gap: 4px;
+
+  span {
+    text-align: left;
+  }
+
+  span:nth-child(-n+2) {
+    align-self: flex-end;
+  }
+
+  span:nth-child(even) {
+    text-align: right;
+  }
+
+  .count {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 12px;
+
+  ion-router-link {
+    display: flex;
+  }
+
+  ion-button {
+    flex: 1;
+  }
+
+  ion-button.primary {
+    --background: #CDDC39;
+    --border-radius: 15px;
+    --color: #525F3B;
+  }
+
+  ion-button.secondary {
+    --background: transparent;
+    --border-color: #ADB2B5;
+    --border-width: 1px;
+    --border-style: solid;
+    --border-radius: 15px;
+  }
+}

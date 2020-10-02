@@ -1,0 +1,13 @@
+<div class="stats">
+    <span class="count">{{ animalGroup.count | number }} pigs</span>
+    <span>Group: <strong>{{ animalGroup.name }}</strong></span>
+    <span>{{ getBirthdateFromTimestamp(animalGroup.birthdateTimestamp) }} weeks old</span>
+    <span>Started: {{ animalGroup.startedAt | date }}</span>
+</div>
+<div class="buttons">
+    <ion-button (click)="presentActionSheet()" class="secondary">Manage pigs</ion-button>
+    <ion-button class="primary" href="logbook">
+        <ion-icon slot="start" name="bookmark"></ion-icon>
+        Logbook
+    </ion-button>
+</div>
