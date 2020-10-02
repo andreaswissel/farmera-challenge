@@ -1,0 +1,16 @@
+:host {
+  box-shadow: 0 0 20px 5px rgba(38, 50, 56, .1);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+
+  margin: 10px 0;
+  padding: 5px 15px;
+}
+
+.extend {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}

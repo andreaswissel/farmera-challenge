@@ -1,0 +1,5 @@
+<ng-content select=".card-content"></ng-content>
+<div *ngIf="isExtendable" class="extend" (click)="onExtend()">
+    <ion-icon name="chevron-down-outline" *ngIf="!isExtended"></ion-icon>
+    <ion-icon name="chevron-up-outline" *ngIf="isExtended"></ion-icon>
+</div>
