@@ -3,6 +3,8 @@ import {AnimalGroupService} from '../animal/animal-group.service';
 import {AnimalGroup} from '../animal/animal-group.interface';
 import {UserService} from '../user/user.service';
 import {User} from '../user/user.interface';
+import {Alert} from '../alert/alert.interface';
+import {AlertService} from '../alert/alert.service';
 
 @Component({
     selector: 'app-home',
@@ -15,9 +17,11 @@ export class HomePage {
     private CARD_MAX_USERS_VISIBLE = 3;
     public team: User[] = [];
     public maxUsersVisible = 1;
+    private alerts: Alert[];
 
     constructor(private animalGroupService: AnimalGroupService,
-                private userService: UserService) {
+                private userService: UserService,
+                private alertService: AlertService) {
         this.animalGroup = animalGroupService.getAnimalGroupById(0);
 
         userService.getTeam(1).subscribe((response: { info: object, results: User[] }) => {
@@ -25,6 +29,9 @@ export class HomePage {
             this.team = response.results;
         });
 
+        alertService.getAlerts().subscribe((response: { alerts: Alert[] }) => {
+            this.alerts = response.alerts;
+        });
     }
 
     onCardExtend() {

@@ -1,0 +1,15 @@
+<header class="header">
+    <ion-icon icon="{{ alert.icon }}"></ion-icon>
+    <h1>{{ alert.title }}</h1>
+    <div class="actions">
+        <ion-icon icon="notifications-circle-outline"></ion-icon>
+        <ion-toggle></ion-toggle>
+    </div>
+</header>
+<div class="text">
+    <p class="type {{ alert.style }}">
+        <span class="indicator"></span>
+        {{ alert.text}}
+    </p>
+    <small>{{ alert.timestamp | timeago }}</small>
+</div>

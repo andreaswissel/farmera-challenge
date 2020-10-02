@@ -15,5 +15,11 @@
         <app-card isExtendable="true" (onCardExtend)="onCardExtend()">
             <app-user *ngFor="let user of team | slice:0:maxUsersVisible" [user]="user" class="card-content"></app-user>
         </app-card>
+        <h1>
+            Alerts ({{alerts.length}})
+        </h1>
+        <app-card>
+            <app-alert *ngFor="let alert of alerts" [alert]="alert" class="card-content"></app-alert>
+        </app-card>
     </div>
 </ion-content>

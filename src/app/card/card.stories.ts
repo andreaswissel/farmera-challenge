@@ -9,7 +9,7 @@ const Template = (args: CardComponent) => ({
 });
 
 export default {
-  title: 'Components/CardComponent',
+  title: 'Components/Card',
   decorators: [moduleMetadata({
     imports: [IonicModule.forRoot(), CardModule]
   })]

@@ -1,0 +1,84 @@
+$error-color: red;
+$success-color: green;
+$warn-color: yellow;
+
+:host {
+  margin-bottom: 15px;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+
+  ion-icon {
+    zoom: 1.5;
+  }
+
+  h1 {
+    color: rgb(38, 50, 56);
+    font-size: 16px;
+
+    margin: 0;
+  }
+
+  .actions {
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+  }
+}
+
+.text {
+  color: rgba(0,0,0, .6);
+  font-size: 14px;
+
+  align-items: center;
+  display: flex;
+  flex: 1;
+  margin: 0 10px;
+
+  small {
+    font-size: 12px;
+
+    margin-left: auto;
+  }
+}
+
+.type {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.indicator {
+  height: 6px;
+  width: 6px;
+
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.error {
+  color: $error-color;
+
+  .indicator {
+    background-color: $error-color;
+  }
+}
+
+.warn {
+  color: $warn-color;
+
+  .indicator {
+    background-color: $warn-color;
+  }
+}
+
+.success {
+  color: $success-color;
+
+  .indicator {
+    background-color: $success-color;
+  }
+}

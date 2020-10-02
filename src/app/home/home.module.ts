@@ -8,6 +8,7 @@ import {HomePageRoutingModule} from './home-routing.module';
 import {HeaderModule} from '../header/header.module';
 import {UserModule} from '../user/user.module';
 import {CardModule} from '../card/card.module';
+import {AlertModule} from '../alert/alert.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {CardModule} from '../card/card.module';
         HomePageRoutingModule,
         HeaderModule,
         CardModule,
-        UserModule
+        UserModule,
+        AlertModule
     ],
     declarations: [HomePage]
 })
