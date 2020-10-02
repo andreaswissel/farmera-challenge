@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'logbook',
+    loadChildren: () => import('./logbook/logbook.module').then( m => m.LogbookPageModule)
+  },
+  {
+    path: 'logbook',
+    loadChildren: () => import('./logbook/logbook.module').then( m => m.LogbookPageModule)
+  },
 ];
 
 @NgModule({
