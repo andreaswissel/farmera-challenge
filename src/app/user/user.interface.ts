@@ -10,13 +10,14 @@ export interface User {
         state: string,
         country: string,
         postcode: number,
-        coordinates: { latitude: number, longitude: number },
-        timzone: { offset: string, description: string }
+        coordinates: { latitude: string, longitude: string },
+        timezone: { offset: string, description: string }
     };
     login: {
         uuid: string,
         username: string,
         password: string,
+        salt: string,
         md5: string,
         sha1: string,
         sha256: string
@@ -26,5 +27,5 @@ export interface User {
     phone: string;
     picture: { large: string, medium: string, thumbnail: string };
     registered: { date: string, age: number };
-    lastCheckin: number;
+    lastCheckin?: number;
 }
