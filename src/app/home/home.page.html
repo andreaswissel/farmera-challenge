@@ -1,11 +1,19 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Farmera
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Farmera
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <app-header [animalGroup]="animalGroup"></app-header>
+    <app-header [animalGroup]="animalGroup"></app-header>
+    <div id="container">
+        <h1>
+            Team ({{team.length}})
+        </h1>
+        <app-card isExtendable="true" (onCardExtend)="onCardExtend()">
+            <app-user *ngFor="let user of team | slice:0:maxUsersVisible" [user]="user" class="card-content"></app-user>
+        </app-card>
+    </div>
 </ion-content>

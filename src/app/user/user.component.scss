@@ -1,0 +1,45 @@
+:host {
+  display: flex;
+
+  padding: 10px 0;
+}
+
+.circle-image {
+  border-radius: 50%;
+
+  height: 41px;
+
+  flex: 0 0 41px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0 10px;
+
+  h1 {
+    color: rgb(38, 50, 56);
+    font-size: 16px;
+
+    margin: 0;
+  }
+
+  h2 {
+    color: rgba(0,0,0, .6);
+    font-size: 12px;
+    margin: 5px 0;
+  }
+}
+
+.buttons {
+  display: flex;
+
+  ion-button {
+    height: 41px;
+    width: 41px;
+    margin-left: 5px;
+  }
+}
