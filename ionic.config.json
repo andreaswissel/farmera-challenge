@@ -1,0 +1,7 @@
+{
+  "name": "farmera",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
